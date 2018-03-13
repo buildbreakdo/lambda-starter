@@ -55,7 +55,7 @@ Open `http://127.0.0.1:3000` in your browser to execute your Lambda function.
 SAM Local will watch your `build` directory for changes and reload when changes occur. To watch your `src` directory (where you will edit code) run `npm run watch`, after any changes are made in `src` webpack will recompile and output to `build` where AWS Sam Local will pickup the code changes. 
 
 #### Test
-Invoke the mock API Gateway event.json by running:
+Invoke your Lambda function using the mock API Gateway event.json by running:
 
 `npm test`
 
