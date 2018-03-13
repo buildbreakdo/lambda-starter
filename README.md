@@ -1,9 +1,9 @@
 # AWS API Gateway & Lambda Starter Kit
 - Babel
   - Presets
-    - Env (Babel preset that automatically determines the Babel plugins you need based on your supported environments)
+    - Env. Babel preset that automatically determines the Babel plugins you need based on your supported environments
   - Plugins
-    - Object rest spread transform (e.g., enables `{ ...someObj }`)
+    - Object rest spread transform. Enables spread syntax `{ ...someOtherObject }`.
 - Webpack
 - AWS Sam Local
 
