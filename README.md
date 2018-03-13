@@ -22,14 +22,12 @@ Starts the AWS SAM Local development server on `http://127.0.0.1:3000`. This ser
 
 Open `http://127.0.0.1:3000` in your browser to execute your Lambda function.
 
-## Prerequisites
-Running Serverless projects and functions locally with SAM Local requires Docker to be installed and running. 
-- macOS: Docker for Mac
-- Windows: Docker Toolbox
-- Linux: Check your distro’s package manager (e.g. yum install docker)
+### Prerequisites
+Running Serverless projects and functions locally with SAM Local requires Docker to be installed and running.
 
-Read more about that from Amazon here: https://github.com/awslabs/aws-sam-local. 
-
+ - macOS: [Docker for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac)
+ - Windows: [Docker Toolbox](https://download.docker.com/win/stable/DockerToolbox.exe)
+ - Linux: Check your distro’s package manager (e.g. yum install docker)
 
 # Watch file changes with `npm run watch`
 SAM Local will watch your `build` directory for changes and reload when changes occur. To watch your `src` directory (where you will edit code) run `npm run watch`, after any changes are made in `src` webpack will recompile and output to `build` where AWS Sam Local will pickup the code changes. 
