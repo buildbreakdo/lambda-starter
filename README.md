@@ -25,7 +25,13 @@ This is just syntactic sugar for running the aws-cli command `aws lambda create-
 
 #### Update
 To update your Lambda function with the latest code run:
+
 `npm run update`
+
+#### Invoke
+To invoke your Lambda function that is now deployed with the mock event.json:
+
+`npm run invoke`
 
 #### Local Development
 Prerequisites. Running Serverless projects and functions locally with SAM Local requires Docker to be installed and running.
@@ -49,11 +55,15 @@ Open `http://127.0.0.1:3000` in your browser to execute your Lambda function.
 #### Watch file changes with `npm run watch`
 SAM Local will watch your `build` directory for changes and reload when changes occur. To watch your `src` directory (where you will edit code) run `npm run watch`, after any changes are made in `src` webpack will recompile and output to `build` where AWS Sam Local will pickup the code changes. 
 
-#### Test with `npm test`
-Invoke the mock API Gateway event.json. Change this as needed. To generate another mock event.json type: `sam local generate-event > anotherEvent.json`
+#### Test
+Invoke the mock API Gateway event.json by running:
 
-#### Invoking function with event via stdin
-`echo '{"queryStringParameters": { "message": "Hey, are you there?" }}' | sam local invoke "Example"`
+`npm test`
+
+Change the event.json as needed. Additional mock events can be generated via: 
+
+`sam local generate-event > anotherEvent.json`
+
 
 #### License
 MIT.
