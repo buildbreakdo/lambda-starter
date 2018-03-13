@@ -4,14 +4,16 @@
   "description": "Minimalist AWS API Gateway and AWS Lambda starter kit",
   "main": "build/index.js",
   "scripts": {
+    "build": "webpack",
     "watch": "webpack --watch",
     "start": "sam local start-api",
-    "build": "webpack",
-    "invoke": "aws lambda invoke --invocation-type RequestResponse --function-name Example --region us-east-1 --log-type None --payload file://event.json outfile.json && cat outfile.json",
+    "test": "sam local invoke -e event.json 'Example'",
+    "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js && zip -q dist.zip node_modules",
+    "precreate": "npm run dist",
     "create": "aws lambda create-function --function-name Example --role arn:aws:iam::9999999999:role/ExecuteLambda --handler index.handler --runtime nodejs6.10 --zip-file fileb://dist.zip --publish",
-    "update": "aws lambda update-function-code --function-name Example --zip-file fileb://dist.zip --publish",
-    "predeploy": "rm -f dist.zip && zip -jq dist.zip build/index.js && zip -q dist.zip node_modules",
-    "test": "sam local invoke -e event.json 'Example'"
+    "invoke": "aws lambda invoke --invocation-type RequestResponse --function-name Example --region us-east-1 --log-type None --payload file://event.json outfile.json && cat outfile.json",
+    "preupdate": "npm run dist",
+    "update": "aws lambda update-function-code --function-name Example --zip-file fileb://dist.zip --publish"
   },
   "repository": {
     "type": "git",
