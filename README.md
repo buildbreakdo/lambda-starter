@@ -9,7 +9,7 @@ npm install
 ```
 
 ## Deploy (manual)
-Run `npm build` and `npm run dist`. Upload the dist.zip to AWS Lambda through their console.
+Run `npm build` and `npm run dist`. Upload the dist.zip to AWS Lambda through the AWS console.
 
 ## That is all! Everything below is just a nice to have..
 -------
