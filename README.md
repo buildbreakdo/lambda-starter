@@ -15,7 +15,7 @@ Run `npm build` and `npm run dist`. Upload the dist.zip to AWS Lambda through th
 -------
 
 #### Deploy (via aws-cli)
-Install the aws-cli instructions can be found (here)[https://github.com/aws/aws-cli]. Replace the example IAM Role ARN in `package.json` `create` script with your own. From AWS Console > IAM > Role > Select Role Name > See "Role ARN" which should look something like `arn:aws:iam::9999999999:role/ExecuteLambda`. Be sure the proper policies are attached to allow the Lambda function to execute.
+Install the aws-cli instructions can be found https://github.com/aws/aws-cli. Replace the example IAM Role ARN in `package.json` `create` script with your own. From AWS Console > IAM > Role > Select Role Name > See "Role ARN" which should look something like `arn:aws:iam::9999999999:role/ExecuteLambda`. Be sure the proper policies are attached to allow the Lambda function to execute.
 
 Once this is copied over run:
 
