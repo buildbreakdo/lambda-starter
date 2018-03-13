@@ -1,11 +1,5 @@
 # AWS API Gateway & Lambda Starter Kit
-- Babel
-  - Presets
-    - Env. Babel preset that automatically determines the Babel plugins you need based on your supported environments
-  - Plugins
-    - Object rest spread transform. Enables spread syntax `{ ...someOtherObject }`.
-- Webpack
-- AWS Sam Local
+Project uses Babel to enable ES6 and the spread operator (e.g., {...someObject}). Webpack to create a single bundle and by resolving import/require statements and watch for changes. AWS Sam Local is used to run API Gateway locally so you can test your Lambda functions. Hot reloading is supported out of the box from webpack and AWS SAM Local.
 
 # Installation
 ```
@@ -21,6 +15,8 @@ npm start
 Starts the AWS SAM Local development server on `http://127.0.0.1:3000`. This server is like running API Gateway Locally (historically we had to upload the code, painful experience no more!). 
 
 Open `http://127.0.0.1:3000` in your browser to execute your Lambda function.
+
+`Note: You only need to restart SAM CLI if you update your AWS SAM template.`
 
 ### Prerequisites
 Running Serverless projects and functions locally with SAM Local requires Docker to be installed and running.
