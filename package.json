@@ -1,0 +1,35 @@
+{
+  "name": "aws-api-lambda",
+  "version": "1.0.0",
+  "description": "Minimalist AWS API Gateway and AWS Lambda starter kit",
+  "main": "build/index.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "start": "sam local start-api",
+    "build": "webpack",
+    "test": "sam local invoke -e event.json 'Example'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildbreakdo/aws-api-lambda.git"
+  },
+  "keywords": [
+    "starter",
+    "starter-kit",
+    "aws-api-gateway",
+    "aws-lambda"
+  ],
+  "author": "Your Name Here",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buildbreakdo/aws-api-lambda/issues"
+  },
+  "homepage": "https://github.com/buildbreakdo/aws-api-lambda#readme",
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
+  }
+}
