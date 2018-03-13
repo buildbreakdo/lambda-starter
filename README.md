@@ -38,4 +38,4 @@ Invoke the mock API Gateway event.json. Change this as needed. To generate anoth
 ### Invoking function with event via stdin
 `echo '{"queryStringParameters": { "message": "Hey, are you there?" }}' | sam local invoke "Example"`
 
-# Happy Coding!
+# License = MIT
