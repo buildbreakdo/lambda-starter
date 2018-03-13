@@ -40,12 +40,11 @@ Prerequisites. Running Serverless projects and functions locally with SAM Local 
  - Windows: [Docker Toolbox](https://download.docker.com/win/stable/DockerToolbox.exe)
  - Linux: Check your distro’s package manager (e.g. yum install docker)
 
-``
+```
 npm install -g aws-sam-local
 npm start
 ```
 
-# Develop Locally with `npm start`
 Starts the AWS SAM Local development server on `http://127.0.0.1:3000`. This server is like running API Gateway Locally (historically we had to upload the code, painful experience no more!). 
 
 Open `http://127.0.0.1:3000` in your browser to execute your Lambda function.
