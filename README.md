@@ -61,7 +61,7 @@ Invoke your Lambda function using the mock API Gateway event.json by running:
 
 Change the event.json as needed. Additional mock events can be generated via: 
 
-`sam local generate-event > anotherEvent.json`
+`sam local generate-event api > anotherEvent.json`
 
 
 #### License
