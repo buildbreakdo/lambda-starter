@@ -22,7 +22,7 @@ module.exports = {
             [
               'env',
               {
-                target: { node: 6.10 }, // Node version on AWS Lambda
+                target: { node: 8.10 }, // Node version on AWS Lambda
                 useBuiltIns: false,
                 loose: false,
                 exclude: [],
