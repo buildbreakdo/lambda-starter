@@ -1,5 +1,3 @@
-import example from './example.json';
-
 exports.handler = (event, context, callback) => {
   return callback(null, {
     statusCode: 200,
@@ -7,8 +5,7 @@ exports.handler = (event, context, callback) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      ...event.queryStringParameters,
-      example
+      "foo": "bar"
     })
   });
 }

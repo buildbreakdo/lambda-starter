@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-runtime",
+    "transform-async-to-generator"
+  ],
+  "presets": [
+    "stage-0",
+    "es2015",
+    [
+      "env",
+      {
+        "target": {
+          "node": "8.10"
+        },
+        "useBuiltIns": false,
+        "loose": false,
+        "exclude": [],
+        "debug": false
+      }
+    ]
+  ]
+}

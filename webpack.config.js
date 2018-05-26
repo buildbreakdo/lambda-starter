@@ -1,36 +1,31 @@
 const path = require('path');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   target: 'node',
-  mode: 'development',
-  entry: './src/index.js',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
     library: 'index',
     libraryTarget: 'commonjs2'
   },
+  plugins: [
+    new HardSourceWebpackPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.BROWSER': false,
+      __DEV__: process.env.NODE_ENV !== 'production',
+    }),
+  ],
   module: {
     rules: [
       {
-        test: /\.js$/,
+        // type: "javascript/auto",
+        test: /(\.js)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          "plugins": ["transform-object-rest-spread"],
-          presets: [
-            [
-              'env',
-              {
-                target: { node: 8.10 }, // Node version on AWS Lambda
-                useBuiltIns: false,
-                loose: false,
-                exclude: [],
-                debug: false
-              },
-            ],
-          ],
-        },
+        loader: 'babel-loader'
       }
     ],
   }
