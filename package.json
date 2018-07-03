@@ -9,7 +9,7 @@
     "watch": "webpack --watch",
     "test": "jest --config ./jest.config.js",
     "test:watch": "jest --watch --config ./jest.config.js",
-    "start": "sam local start-api",
+    "start": "sam local start-api --port 5000",
     "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js && zip -rq dist.zip node_modules",
     "precreate": "npm run dist",
     "create": "aws lambda create-function --function-name Example --role arn:aws:iam::9999999999:role/ExecuteLambda --handler index.handler --runtime nodejs8.10 --zip-file fileb://dist.zip --publish",
