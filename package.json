@@ -29,7 +29,6 @@
     "aws-lambda"
   ],
   "author": "Your Name Here",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/buildbreakdo/aws-api-lambda/issues"
   },
