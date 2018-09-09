@@ -1,6 +1,8 @@
 module.exports = {
   "testEnvironment": "node",
 
+  "verbose": false,
+
   "globals": {
     "__DEV__": true
   },
