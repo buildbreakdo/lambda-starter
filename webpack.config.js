@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = {
   target: 'node',
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  entry: ['@babel/polyfill', './src/index.js'],
+  entry: ['@babel/core', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
