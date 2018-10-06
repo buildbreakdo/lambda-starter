@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = {
   target: 'node',
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  entry: ['babel-polyfill', './src/index.js'],
+  entry: ['@babel/polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
@@ -22,10 +22,14 @@ module.exports = {
   module: {
     rules: [
       {
-        // type: "javascript/auto",
         test: /(\.js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        type: 'javascript/auto',
+        test: /\.mjs$/,
+        use: []
       }
     ],
   }
