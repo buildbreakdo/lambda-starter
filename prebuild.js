@@ -17,5 +17,8 @@ if (!buildPackageJson || JSON.stringify(packageJson) !== JSON.stringify(buildPac
     }
   });
 
+  console.log();
+  console.log('Installing only production dependencies in ./build via: (cd build && npm install --only=production)')
+  console.log('This make take a while depending on the size of production dependencies..')
   child_process.exec('(cd build && npm install --only=production)');
 }
