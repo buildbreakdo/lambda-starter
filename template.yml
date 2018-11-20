@@ -8,7 +8,7 @@ Resources:
     Properties:
       CodeUri: ./build
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs8.10
       Timeout: 30000
       Events:
         Aggregations:
