@@ -6,8 +6,8 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --display-error-details --display-modules",
     "watch": "webpack --watch",
-    "test": "jest --config ./jest.config.js",
-    "test:watch": "jest --watch --config ./jest.config.js",
+    "test": "jest --config --verbose ./jest.config.js",
+    "test:watch": "jest --watch --verbose --config ./jest.config.js",
     "start": "sam local start-api --port 5000",
     "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js",
     "update:dev": "aws lambda update-function-code --function-name DevExample --zip-file fileb://dist.zip --publish",
