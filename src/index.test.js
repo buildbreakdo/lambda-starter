@@ -1,4 +1,8 @@
-// Event and callback are provided by jest.globals.js
+/* Globals -- jest.globals.js:
+   callback
+   event
+*/
+
 import { handler } from './index.js';
 
 test('Handler does not explode on import', () => {
