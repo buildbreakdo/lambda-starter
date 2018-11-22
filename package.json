@@ -40,7 +40,6 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "cross-fetch": "^2.2.3",
-    "node-fetch": "^2.3.0"
+    "cross-fetch": "^2.2.3"
   }
 }
