@@ -1,9 +1,12 @@
-/* Globals -- jest.globals.js:
-   callback
-   event
-*/
-
+import event from '../event.json';
 import { handler } from './index.js';
+
+function callback (error, response) { return error || response }
+
+beforeEach(() => {
+  // reset event.json
+  jest.resetModules();
+});
 
 test('Handler does not explode on import', () => {
   expect(true).toBe(true);

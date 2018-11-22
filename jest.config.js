@@ -11,9 +11,5 @@ module.exports = {
     "/node_modules/"
   ],
 
-  "setupFiles": [
-    "./jest.globals.js"
-  ],
-
   "rootDir": "./"
 }
