@@ -24,7 +24,7 @@
     "stage": "prod"
   },
   "queryStringParameters": {
-    "foo": "bar"
+    "q": "https://google.com"
   },
   "headers": {
     "Via": "1.1 08f323deadbeefa7af34d5feb414ce27.cloudfront.net (CloudFront)",

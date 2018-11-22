@@ -4,13 +4,12 @@
   "description": "Minimalist AWS API Gateway and AWS Lambda starter kit",
   "main": "build/index.js",
   "scripts": {
-    "prebuild": "node prebuild.js",
     "build": "NODE_ENV=production webpack --display-error-details --display-modules",
     "watch": "webpack --watch",
     "test": "jest --config ./jest.config.js",
     "test:watch": "jest --watch --config ./jest.config.js",
     "start": "sam local start-api --port 5000",
-    "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js && (cd build && zip -rq ../dist.zip node_modules)",
+    "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js",
     "update:dev": "aws lambda update-function-code --function-name DevExample --zip-file fileb://dist.zip --publish",
     "update:prod": "aws lambda update-function-code --function-name ProdExample --zip-file fileb://dist.zip --publish",
     "deploy:dev": "npm run build && npm run test && npm run dist && npm run update:dev",
@@ -32,16 +31,16 @@
   },
   "homepage": "https://github.com/buildbreakdo/aws-api-lambda#readme",
   "devDependencies": {
-    "@babel/core": "*",
-    "@babel/preset-env": "*",
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "*",
-    "jest": "*",
-    "jest-cli": "*",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.4",
-    "regenerator-runtime": "^0.12.1",
+    "jest": "^23.6.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "cross-fetch": "^2.2.3",
+    "node-fetch": "^2.3.0"
+  }
 }
