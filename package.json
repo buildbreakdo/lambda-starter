@@ -9,7 +9,7 @@
     "test": "jest --config ./jest.config.js",
     "test:watch": "jest --watch --config ./jest.config.js",
     "start": "sam local start-api --port 5000",
-    "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js && zip -rq dist.zip ./build/node_modules",
+    "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js && zip -rq dist.zip node_modules",
     "update:dev": "aws lambda update-function-code --function-name DevExample --zip-file fileb://dist.zip --publish",
     "update:prod": "aws lambda update-function-code --function-name ProdExample --zip-file fileb://dist.zip --publish",
     "deploy:dev": "npm run build && npm run test && npm run dist && npm run update:dev",
@@ -47,12 +47,13 @@
     "babel-preset-stage-0": "^6.24.1",
     "copy-webpack-plugin": "^4.5.1",
     "hard-source-webpack-plugin": "^0.6.6",
-    "jest": "*",
-    "jest-cli": "*",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
     "regenerator-runtime": "^0.11.1",
     "webpack": "^4.8.1",
     "webpack-cli": "^2.0.11"
   },
   "dependencies": {
+    "node-fetch": "^2.3.0"
   }
 }
