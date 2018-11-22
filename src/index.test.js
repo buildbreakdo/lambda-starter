@@ -1,14 +1,14 @@
+// Event and callback are provided by jest.globals.js
 import { handler } from './index.js';
-const event = require('../event.json');
-
-function mockCallback(error, data) { return error || data }
 
 test('Handler does not explode on import', () => {
   expect(true).toBe(true);
 });
 
 test('Fetch google.com', async () => {
-  const response = await handler(event, null, mockCallback)
+  event.queryStringParameters.href = encodeURIComponent('https://google.com');
+
+  const response = await handler(event, null, callback)
 
   expect(response.statusCode).toBe(200);
 });

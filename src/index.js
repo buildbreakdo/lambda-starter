@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 exports.handler = async (event, context, callback) => {
-  const request = fetch('https://google.com', {
+  const request = fetch(decodeURIComponent(event.queryStringParameters.href), {
     method: 'HEAD'
   });
 
