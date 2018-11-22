@@ -1,5 +1,5 @@
 {
-  "name": "aws-api-lambda",
+  "name": "lambda-starter",
   "version": "1.0.0",
   "description": "Minimalist AWS API Gateway and AWS Lambda starter kit",
   "main": "build/index.js",
@@ -9,7 +9,7 @@
     "test": "jest --config ./jest.config.js",
     "test:watch": "jest --watch --config ./jest.config.js",
     "start": "sam local start-api --port 5000",
-    "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js && zip -rq dist.zip node_modules",
+    "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js",
     "update:dev": "aws lambda update-function-code --function-name DevExample --zip-file fileb://dist.zip --publish",
     "update:prod": "aws lambda update-function-code --function-name ProdExample --zip-file fileb://dist.zip --publish",
     "deploy:dev": "npm run build && npm run test && npm run dist && npm run update:dev",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/buildbreakdo/aws-api-lambda.git"
+    "url": "git+https://github.com/buildbreakdo/lambda-starter.git"
   },
   "keywords": [
     "starter",
@@ -27,16 +27,15 @@
   ],
   "author": "Your Name Here",
   "bugs": {
-    "url": "https://github.com/buildbreakdo/aws-api-lambda/issues"
+    "url": "https://github.com/buildbreakdo/lambda-starter/issues"
   },
-  "homepage": "https://github.com/buildbreakdo/aws-api-lambda#readme",
+  "homepage": "https://github.com/buildbreakdo/lambda-starter#readme",
   "devDependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.26.0",
     "jest": "^23.6.0",
     "jest-cli": "^23.6.0",
     "webpack": "^4.8.1",

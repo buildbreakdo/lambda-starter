@@ -4,7 +4,7 @@ const webpack = require('webpack');
 module.exports = {
   target: 'node',
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  entry: ['babel-polyfill', './src/index.js'],
+  entry: [ './src/index.js' ],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'index.js',
@@ -12,6 +12,7 @@ module.exports = {
     libraryTarget: 'commonjs2'
   },
   plugins: [
+    new webpack.IgnorePlugin(/^pg-native$/),
     new webpack.DefinePlugin({
       'process.env.BROWSER': false,
       __DEV__: process.env.NODE_ENV !== 'production',
@@ -20,7 +21,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /(\.js)$/,
+        test: /\.(mjs|js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       }
