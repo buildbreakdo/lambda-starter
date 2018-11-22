@@ -1,5 +1,4 @@
 const path = require('path');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -13,7 +12,6 @@ module.exports = {
     libraryTarget: 'commonjs2'
   },
   plugins: [
-    new HardSourceWebpackPlugin(),
     new webpack.DefinePlugin({
       'process.env.BROWSER': false,
       __DEV__: process.env.NODE_ENV !== 'production',
@@ -22,7 +20,6 @@ module.exports = {
   module: {
     rules: [
       {
-        // type: "javascript/auto",
         test: /(\.js)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
