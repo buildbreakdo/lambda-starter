@@ -5,7 +5,9 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
   target: 'node',
   optimization: {
-    minimizer: [new TerserPlugin()]
+    minimizer: [
+      new TerserPlugin()
+    ]
   },
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: [ './src/index.js' ],
