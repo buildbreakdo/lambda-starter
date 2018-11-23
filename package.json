@@ -6,7 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --display-error-details --display-modules",
     "watch": "webpack --watch",
-    "test": "jest --config --verbose ./jest.config.js",
+    "test": "CI=true jest --config --verbose ./jest.config.js",
     "test:watch": "jest --watch --verbose --config ./jest.config.js",
     "start": "sam local start-api --port 5000",
     "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js",
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/buildbreakdo/lambda-starter#readme",
   "devDependencies": {
     "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
