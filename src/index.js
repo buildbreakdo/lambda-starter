@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 
 exports.handler = async (event, context, callback) => {
+  // Request headers for a mock 200 response
   const request = fetch(decodeURIComponent(event.queryStringParameters.href), {
     method: 'HEAD'
   });
