@@ -1,5 +1,6 @@
 {
-  "name": "lambda-starter",
+  "private": true,
+	"name": "lambda-starter",
   "version": "1.0.0",
   "description": "Minimalist AWS API Gateway and AWS Lambda starter kit",
   "main": "build/index.js",
