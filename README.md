@@ -1,5 +1,5 @@
 ## AWS API Gateway & Lambda Starter Kit
-Project uses Babel to enable ES6 and the spread operator (e.g., `{...someObject}`). Webpack to create a single bundle and by resolving import/require statements and watch for changes. AWS Sam Local is used to run API Gateway locally so you can test your Lambda functions. Hot reloading is supported out of the box from webpack and AWS SAM Local.
+Project uses Babel to enable ES6 and class syntax. Webpack to bundle and watch for changes. AWS Sam Local is used to run API Gateway locally so you can test your Lambda functions without deploying to AWS.
 
 ## Installation
 ```
