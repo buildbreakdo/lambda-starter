@@ -28,7 +28,7 @@ To ensure correct assignment of IAM and role with permissions the recomendation 
 ```
 4) `npm run deploy` to build, run tests and update your function to the latest code
 
-## Scripts (package.json)
+## Run Scripts
 
 ### Build
 Use webpack to build build/index.js:
