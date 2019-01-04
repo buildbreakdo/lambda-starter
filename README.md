@@ -59,14 +59,9 @@ Monitor `src` folder for changes and rebuild when changes occur.
 `npm run watch`
 
 ### Start
-Run API Gateway locally using `template.yml` configuration. This configuration points to `build/index.js`.
+Used to be the case that we had to deploy a lambda function to test what would actually happen in a production environment. This is no longer the case, now we can emulate API Gateway locally using SAM Local. The `template.yml` file in the root of the repository is the configuration used by SAM Local (points to code in `build/index.js`).
 
-`npm run start`
-
-Navigate to `localhost:5000` to see your function live locally. Changes are automatically watched for.
-
-#### Local Development
-Prerequisites. Running Serverless projects and functions locally with SAM Local requires Docker to be installed and running.
+Local Development Prerequisites. Running Serverless projects and functions locally with SAM Local requires Docker to be installed and running.
 
  - macOS: [Docker for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac)
  - Windows: [Docker Toolbox](https://download.docker.com/win/stable/DockerToolbox.exe)
@@ -77,18 +72,13 @@ npm install -g aws-sam-local
 npm start
 ```
 
-Starts the AWS SAM Local development server on `http://127.0.0.1:3000`. This server is like running API Gateway Locally (historically we had to upload the code, painful experience no more!).
-
-Open `http://127.0.0.1:3000` in your browser to execute your Lambda function.
+Starts the AWS SAM Local development server on `http://127.0.0.1:3000`. Open `http://127.0.0.1:3000` in your browser to execute your Lambda function.
 
 `Note: You only need to restart SAM CLI if you update your AWS SAM template.`
 
-#### Watch file changes
 SAM Local will watch your `build` directory for changes and reload when changes
-occur. To watch your `src` directory (where you will edit code) run `npm run watch`,
-after any changes are made in `src` webpack will recompile and output to `build`
-where AWS Sam Local will pickup the code changes.
-
+occur. Be sure to run `npm run watch` to monitor your `src` directory (where you will be writing code) to ensure SAM Local
+always has the latest `build/index.js`. Happy coding!
 
 #### License
 MIT.
