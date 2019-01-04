@@ -31,7 +31,7 @@ To ensure correct assignment of IAM and role with permissions the recomendation 
 ## Run Scripts
 
 ### Build
-Use webpack to build build/index.js:
+Use webpack to build/index.js:
 
 `npm run build`
 
