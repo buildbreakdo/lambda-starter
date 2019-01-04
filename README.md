@@ -1,7 +1,7 @@
 ## AWS Lambda Starter Kit
--Babel to enable ES6 and class syntax
--Webpack to bundle, watch for changes and eliminate dead code
--AWS Sam Local to run API Gateway locally so you can test your Lambda functions without deploying to AWS
+- Babel to enable ES6 and class syntax
+- Webpack to bundle, watch for changes and eliminate dead code
+- AWS Sam Local to run API Gateway locally so you can test your Lambda functions without deploying to AWS
 
 ## Installation
 ```
@@ -26,7 +26,7 @@ To ensure correct assignment of IAM and role with permissions the recomendation 
   }
 ...
 ```
-4) `npm run deploy` to deploy
+4) `npm run deploy` to build, run tests and update your function to the latest code
 
 ## Scripts (package.json)
 
