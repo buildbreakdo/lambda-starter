@@ -1,6 +1,6 @@
 {
   "private": true,
-	"name": "lambda-starter",
+  "name": "lambda-starter",
   "version": "1.0.0",
   "description": "Minimalist AWS API Gateway and AWS Lambda starter kit",
   "main": "build/index.js",
@@ -11,10 +11,8 @@
     "test:watch": "jest --watch --verbose=false --config ./jest.config.js",
     "start": "sam local start-api --port 5000",
     "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js",
-    "update:dev": "aws lambda update-function-code --function-name DevExample --zip-file fileb://dist.zip --publish",
-    "update:prod": "aws lambda update-function-code --function-name ProdExample --zip-file fileb://dist.zip --publish",
-    "deploy:dev": "npm run build && npm run test && npm run dist && npm run update:dev",
-    "deploy:prod": "npm run build && CI=true npm run test && npm run dist && npm run update:prod"
+    "update": "aws lambda update-function-code --function-name FooBarExample --zip-file fileb://dist.zip --publish",
+    "deploy": "npm run build && npm run test && npm run dist && npm run update"
   },
   "repository": {
     "type": "git",
