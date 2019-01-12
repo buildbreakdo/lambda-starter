@@ -41,19 +41,19 @@ Build, execute tests in continuous integration mode (bail on failure) and update
 `npm run update`
 
 ### Test
-Run jest tests:
+##### Run jest tests:
 
 `npm run test`
 
-Run jest tests in continuous integration mode (hard exit on test failure):
+##### Run jest tests in continuous integration mode (hard exit on test failure):
 
 `npm run test:ci`
 
-Run Jest tests continuously and watch for changes:
+##### Run Jest tests continuously and watch for changes:
 
 `npm run test:watch`
 
-Debug Jest tests with Chrome browser
+##### Debug Jest tests with Chrome browser:
 
 1) Insert `debugger` on a line in your Jest test
 2) `npm run test:debug`
