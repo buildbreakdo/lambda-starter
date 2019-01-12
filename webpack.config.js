@@ -9,6 +9,9 @@ module.exports = {
       new TerserPlugin()
     ]
   },
+  externals: {
+    'aws-sdk': 'aws-sdk'
+  },
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: [ './src/index.js' ],
   output: {
