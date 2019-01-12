@@ -38,7 +38,7 @@ Use webpack to build/index.js:
 ### Deploy
 Build, execute tests in continuous integration mode (bail on failure) and update your Lambda function with the latest code:
 
-`npm run update`
+`npm run deploy`
 
 ### Test
 ##### Run jest tests:
