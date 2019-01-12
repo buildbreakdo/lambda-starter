@@ -8,6 +8,7 @@
     "build": "NODE_ENV=production webpack --display-error-details --display-modules",
     "watch": "webpack --watch",
     "test": "jest --verbose=false --config ./jest.config.js",
+    "test:debug": "echo '/*' && echo '  Navigate to about:inspect in Chrome' && echo '*/' && node --inspect node_modules/.bin/jest --runInBand",
     "test:ci": "CI=true jest --verbose=false --config ./jest.config.js",
     "test:watch": "jest --watch --verbose=false --config ./jest.config.js",
     "start": "sam local start-api --port 5000",
