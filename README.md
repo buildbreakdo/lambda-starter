@@ -11,7 +11,7 @@ npm install
 ```
 
 ## Create
-To ensure correct assignment of IAM, role and permissions the recomendation is to initialize the lambda function manually on AWS manually.
+To ensure correct assignment of IAM, role and permissions the recomendation is to initialize the lambda function manually on AWS.
 
 1) [Create a Lambda Function using the AWS Console](https://docs.aws.amazon.com/lambda/latest/dg/getting-started-create-function.html)
 2) Update function-name in `package.json` with the name of the function you just created:
