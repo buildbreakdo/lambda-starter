@@ -53,6 +53,12 @@ Run Jest tests continuously and watch for changes:
 
 `npm run test:watch`
 
+Debug Jest tests with Chrome browser
+
+1) Insert `debugger` on a line in your Jest test
+2) `npm run test:debug`
+3) Open Chrome and navigate to about:inspect
+
 ### Watch
 Monitor `src` folder for changes and rebuild when changes occur.
 
