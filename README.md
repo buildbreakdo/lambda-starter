@@ -55,7 +55,7 @@ Build, execute tests in continuous integration mode (bail on failure) and update
 
 ##### Debug Jest tests with Chrome browser:
 
-1) Insert `debugger` on a line in your Jest test
+1) Insert `debugger` on a line in your test
 2) `npm run test:debug`
 3) Open Chrome and navigate to about:inspect
 
@@ -87,4 +87,4 @@ occur. Be sure to run `npm run watch` to monitor your `src` directory (where you
 always has the latest `build/index.js`. Happy coding!
 
 #### License
-MIT.
+MIT
