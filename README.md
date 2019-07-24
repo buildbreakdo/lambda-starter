@@ -66,7 +66,7 @@ Monitor `src` folder for changes and rebuild when changes occur.
 `npm run watch`
 
 ### Start
-Used to be the case that we had to deploy a lambda function to test what would actually happen in a production environment. This is no longer the case, now we can emulate API Gateway locally using SAM Local. The `template.yml` file in the root of the repository is the configuration used by SAM Local (points to code in `build/index.js`).
+Used to be the case that we had to deploy a lambda function to test what would actually happen in a production environment. This is no longer the case, now we can emulate API Gateway and AWS Lambda locally using the [AWS-SAM-CLI](https://github.com/awslabs/aws-sam-cli) from Amazon. The `template.yml` file in the root of the repository is the configuration used by SAM Local (points to code in `build/index.js`).
 
 Local Development Prerequisites. Running functions locally with SAM Local requires Docker to be installed and running.
 
