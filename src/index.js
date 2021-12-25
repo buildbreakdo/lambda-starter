@@ -21,7 +21,7 @@ exports.handler = async (event, context, callback) => {
 
   return callback(null, {
     statusCode: 200,
-    header: {
+    headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
