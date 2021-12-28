@@ -41,7 +41,7 @@ afterAll(() => {
 });
 
 test('returns error when href is not passed', (done) => {
-  fetch(`${lambdaUrl}`)
+  fetch(lambdaUrl)
     .then(res => {
       expect(res.status).toEqual(500);
       return res.json();

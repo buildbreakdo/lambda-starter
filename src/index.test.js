@@ -19,7 +19,7 @@ test('returns error when href is not provided', async () => {
 });
 
 test('returns error when href is invalid', async () => {
-  event.queryStringParameters.href = null;
+  event.queryStringParameters.href = 'google.com';
 
   const response = await handler(event, null);
 
