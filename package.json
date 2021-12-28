@@ -11,7 +11,9 @@
     "test:debug": "echo '/*' && echo '  Navigate to about:inspect in Chrome' && echo '*/' && node --inspect node_modules/.bin/jest --runInBand",
     "test:ci": "CI=true jest --verbose=false --config ./jest.config.js",
     "test:watch": "jest --watch --verbose=false --config ./jest.config.js",
-    "start": "sam local start-api --port 5000",
+    "test:integration": "npm run build && jest --verbose=false --config ./jest.config.integration.js",
+    "test:watch:integration": "npm run build && jest --watch --verbose=false --config ./jest.config.integration.js",
+    "start": "sam local start-api --port 5000 2>&1 | tr \"\\r\" \"\\n\"",
     "dist": "rm -f dist.zip && zip -jq dist.zip build/index.js",
     "update": "aws lambda update-function-code --function-name FooBarExample --zip-file fileb://dist.zip --publish",
     "deploy": "npm run build && npm run test:ci && npm run dist && npm run update"

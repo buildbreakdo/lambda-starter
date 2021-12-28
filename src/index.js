@@ -1,29 +1,27 @@
 import fetch from 'node-fetch';
 
-exports.handler = async (event, context, callback) => {
-  // Request headers for a mock 200 response
-  const request = fetch(decodeURIComponent(event.queryStringParameters.href), {
-    method: 'HEAD'
-  });
+function createResponse(statusCode, body) {
+  return {
+    statusCode: statusCode,
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(body)
+  }
+}
 
-  let data;
+exports.handler = async ({queryStringParameters}, context) => {
+  // TODO: Validate body or query params with some kind of json schema. AJV?
   try {
-    const response = await request;
+    // Request headers for a mock 200 response
+    const response = await fetch(decodeURIComponent(queryStringParameters.href), {
+      method: 'HEAD'
+    });
 
-    data = {
+    return createResponse(200, {
       url: response.url,
       status: response.status,
       statusText: response.statusText
-    };
-  } catch (e) {
-    console.log(e);
+    });
+  } catch (error) {
+    return createResponse(500, {error: {message: error.message}});
   }
-
-  return callback(null, {
-    statusCode: 200,
-    header: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  });
-}
+};
