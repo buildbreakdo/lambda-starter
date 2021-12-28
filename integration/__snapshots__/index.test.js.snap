@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetches google.com 1`] = `
+Object {
+  "status": 200,
+  "statusText": "OK",
+  "url": "https://www.google.com/",
+}
+`;
+
+exports[`returns error when href is invalid 1`] = `
+Object {
+  "error": Object {
+    "message": "Only absolute URLs are supported",
+  },
+}
+`;
+
+exports[`returns error when href is not passed 1`] = `
+Object {
+  "error": Object {
+    "message": "Cannot read property 'href' of null",
+  },
+}
+`;

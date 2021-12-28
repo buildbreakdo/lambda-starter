@@ -11,5 +11,9 @@ module.exports = {
     '/node_modules/(?!@)/'
   ],
 
-  "rootDir": "./"
-}
+  "rootDir": "./",
+
+  "modulePathIgnorePatterns": [
+    'integration'
+  ]
+};
